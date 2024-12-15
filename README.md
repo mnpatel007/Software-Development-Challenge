@@ -53,9 +53,3 @@ Before running the project, ensure you have the following installed on your syst
 - **Database**: MySQL
 
 ---
-
-## Screenshots
-
-Add relevant screenshots of your application here.
-
----
