@@ -1,0 +1,195 @@
+/* General Reset */
+body, h1, h2, p, form, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Maintain Original Card Styling */
+.card, .card2 {
+    background: white;
+    padding: 20px; /* Original padding retained */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px; /* Maintain original flex size */
+    max-width: 400px; /* Limit max width for cards */
+}
+
+.card2 {
+    background: white;
+    padding: 20px; /* Original padding retained */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 100px; /* Maintain original flex size */
+    max-width: 430px; /* Limit max width for cards */
+}
+
+/* Flexbox layout for the cards */
+main {
+    display: flex;
+    justify-content: space-between; /* Align cards to left, center, right */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Consistent spacing between cards */
+    padding: 10px; /* Add some padding to prevent content from touching edges */
+}
+
+/* Ensure cards adapt to smaller screens */
+@media (max-width: 768px) {
+    .card, .card2 {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Remove max-width for better stacking */
+    }
+
+    main {
+        justify-content: center; /* Center-align stacked cards */
+        gap: 15px; /* Slightly reduce gap for smaller screens */
+    }
+}
+
+.card h2, .card2 h2 {
+    margin-bottom: 15px;
+    color: #0077b6;
+    font-size: 1.25rem; /* Ensure clear heading size */
+}
+
+
+.form-group  {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 95%;
+    padding: 10px;
+    border: 4px solid #ddd;
+    border-radius: 4px;
+}
+
+.form label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form input {
+    width: 95%;
+    padding: 12px;
+    border: 4px solid #ddd;
+    border-radius: 4px;
+}
+
+#search-criteria {
+    width: 100%;
+    padding: 14px;
+    border: 4px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 15px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #005f89;
+}
+
+#export-csv {
+    display: inline-block;
+    background-color: #00ac0b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#export-csv:hover{
+    background-color: #005406;
+}
+
+#entries-result {
+    margin: 20px auto;
+    max-width: 90%;
+    overflow-x: auto; /* Ensures the table is scrollable on smaller screens */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Table Styling */
+/* Shared Table Styling */
+.entries-table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.entries-table th, .entries-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.entries-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.entries-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.entries-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Scrollable Table */
+#entries-result, #find-result {
+    max-height: 400px; /* Set max height for scrollable area */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+

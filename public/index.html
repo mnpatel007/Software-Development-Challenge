@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Book Management System</h1>
+    </header>
+
+    <main>
+        <section id="add-data" class="card">
+            <h2>Add New Book</h2>
+            <form method="post" action="/api/User">
+                <div class="form-group">
+                    <label for="title">Book Title</label>
+                    <input type="text" id="title" name="title" placeholder="Title of the book" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" placeholder="Author of the book" required>
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre</label>
+                    <input type="text" id="genre" name="genre" placeholder="Genre" required>
+                </div>
+                <div class="form-group">
+                    <label for="publication_date">Publication Date</label>
+                    <input type="date" id="publication_date" name="publication_date" placeholder="DD-MM-YYYY" required>
+                </div>
+                <div class="form-group">
+                    <label for="isbn">ISBN</label>
+                    <input type="number" id="isbn" name="isbn" placeholder="ISBN" required>
+                </div>
+                <button type="submit" class="btn">Add Book</button>
+            </form>
+        </section>
+
+        <section id="show-books" class="card2">
+            <h2>View All Books</h2>
+            <button id="entries-btn" class="btn">Show Entries</button>
+            <button id="export-csv">Export as CSV</button>
+            <button id="export-json" class="btn">Export as JSON</button>
+            <div id="entries-result"></div>
+        </section>
+        
+        <section id="Find-book" class="card">
+            <h2>Find a Book</h2>
+            <form id="find-book-form">
+                <div class="form">
+                    <label for="search-criteria">Search By: </label>
+                    <select name="search-criteria" id="search-criteria">
+                        <option value="title">Title</option>
+                        <option value="author">Author</option>
+                        <option value="isbn">ISBN</option>
+                        <option value="genre">Genre</option>
+                    </select>
+                </div>
+                <div class="form">
+                    <label for="search-query">Enter your Query:</label>
+                    <input type="text" name="search-query" id="search-query" placeholder="Type here...">
+                </div>
+                <button type="submit" class="btn">Find-book</button>
+            </form>
+            <div id="find-result"></div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Book Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
